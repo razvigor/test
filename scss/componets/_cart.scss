@@ -1,0 +1,76 @@
+@use '../custom' as *;
+
+.main {
+	height: calc(100vh - 86px - 0.5rem);
+	.container-fluid {
+		max-height: 100%;
+	}
+	.row {
+		overflow-x: auto;
+		&::-webkit-scrollbar {
+			height: 0.8rem;
+		}
+		&::-webkit-scrollbar-thumb {
+			background-color: $grayLight;
+			outline: 1px solid slategrey;
+			border-radius: 15px;
+		}
+	}
+	.item {
+		background-color: $cartDark !important;
+		max-height: 100%;
+	}
+	.card {
+		height: calc(100vh - 86px - 1.4rem);
+	}
+	.card-body {
+		background-color: $cartLighterDark;
+		overflow-y: auto;
+		padding-bottom: 70px;
+		&::-webkit-scrollbar {
+			width: 0.8rem;
+		}
+		&::-webkit-scrollbar-thumb {
+			background-color: $grayLight;
+			outline: 1px solid slategrey;
+			border-radius: 15px;
+		}
+	}
+	.header {
+		&:hover {
+			span {
+				color: $danger;
+			}
+		}
+		.btn {
+			&:hover {
+				background-color: $grayLight;
+			}
+		}
+	}
+	ul {
+		.btn {
+			height: 38px;
+			span {
+				display: none;
+			}
+			&:hover {
+				span {
+					display: inline-block;
+				}
+			}
+		}
+	}
+	.footer {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		background-color: $cartDark;
+		width: 100%;
+		.btn {
+			&:hover {
+				background-color: $cartLighterDark;
+			}
+		}
+	}
+}
